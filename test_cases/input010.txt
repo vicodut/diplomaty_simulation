@@ -1,0 +1,15 @@
+14
+Army00000000 Hillsborough00000000 Move Burlingame
+Army00000001 Hillsborough00000001 Move Burlingame
+Army00000002 Hillsborough00000002 Move Burlingame
+Army00000003 Hillsborough00000003 Move Burlingame
+Army00000004 Hillsborough00000004 Move Burlingame
+Army00000005 Hillsborough00000005 Move Burlingame
+Army00000006 Hillsborough00000006 Move Burlingame
+Army00000007 Hillsborough00000007 Move Burlingame
+Army00000008 Hillsborough00000008 Move Burlingame
+Army00000009 Hillsborough00000009 Move Burlingame
+Army00000010 Hillsborough00000010 Move Burlingame
+Army00000011 Hillsborough00000011 Move Burlingame
+Army00000012 Hillsborough00000012 Move Burlingame
+B Millbrae Support Army00000010

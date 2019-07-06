@@ -1,0 +1,13 @@
+12
+A Munich Support D
+B Bohemia Support D
+C Craig Support J
+D Prussia Move France
+E Warsaw Support I
+F Burlingame Support I
+G Millbrae Support I
+H Frankton Support J
+I Clayton Move France
+J Michael Move France
+K Spain Support D
+L Lombard Support I

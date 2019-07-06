@@ -1,0 +1,7 @@
+6
+A Munich Support B
+B Bohemia Support C
+C Warsaw Support A
+D SF Move Munich
+E Oakland Move Bohemia
+F Burlingame Move Warsaw
