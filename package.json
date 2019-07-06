@@ -1,0 +1,17 @@
+{
+  "name": "airbnb_challenge",
+  "version": "1.0.0",
+  "description": "Simulation for Diplomacy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}

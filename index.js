@@ -1,30 +1,5 @@
 'use strict';
 
-const fs = require('fs');
-
-process.stdin.resume();
-process.stdin.setEncoding('utf-8');
-
-let inputString = '';
-let currentLine = 0;
-
-process.stdin.on('data', function(inputStdin) {
-    inputString += inputStdin;
-});
-
-process.stdin.on('end', function() {
-    inputString = inputString.split('\n');
-
-    main();
-});
-
-function readLine() {
-    return inputString[currentLine++];
-}
-
-
-
-
 class Army {
     constructor(
         name, 
@@ -47,7 +22,6 @@ class Army {
 // Complete the evaluateActions function below.
 function evaluateActions(actions) {
     let armies = [];
-    console.log(actions);
     for (let action of actions) {
         let act = action.split(' ');
         armies.push(
@@ -63,16 +37,15 @@ function evaluateActions(actions) {
         );
     }
 
-    armies = move(armies);
+    armies = move(armies)
     armies = calcStrength(armies);
     armies = battle(armies);
-    console.log(armies)
     return buildResult(armies);
 }
 
 function move(armies) {
     for(let army of armies) {
-        if(army.action == 'Move') {
+        if(army.action === 'Move') {
             army.position = army.destination;
         }
     }
@@ -81,7 +54,7 @@ function move(armies) {
 
 function calcStrength(armies) {
     for(let army of armies) {
-        if(army.action == 'Support' && !attacked(armies, army.position)) {
+        if(army.action === 'Support' && !attacked(armies, army.position)) {
             armies = addStrength(armies, army.destination);
         }
     }
@@ -94,10 +67,15 @@ function attacked(armies, pos) {
 
 function battle(armies) {
     for(let army1 of armies) {
-        for(army2 of armies) {
-            if(army1.name !== army2.name) {
+        for(let army2 of armies) {
+            if(army1.name !== army2.name && army1.position === army2.position) {
                 if(army1.strength < army2.strength) {
                     army1.exist = false;
+                } else if(army2.strength < army1.strength) {
+                  army2.exist = false;
+                } else if (army1.strength === army2.strength) {
+                    army1.exist = false;
+                    army2.exist = false;
                 }
             }
         }
@@ -119,4 +97,8 @@ function buildResult(armies) {
         res.push(`${army.name} ${army.exist ? army.position : '[dead]'}`);
     }
     return res;
+}
+
+module.exports = {
+    evaluateActions
 }
